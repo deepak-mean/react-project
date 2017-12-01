@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Users from './config/users.js';
-
+import moment from 'moment';
 
 class SocialCard extends React.Component {
 	render() {
@@ -34,6 +34,7 @@ class SocialApp extends React.Component {
 
 	setUserData(){	
 		console.log(Users.users);
+		
 		this.setState({name : Users.users[this.state.index].name, time : moment().format("hh:mm a"), index : this.state.index+1});
 	}
 
